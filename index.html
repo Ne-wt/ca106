@@ -12,8 +12,6 @@
             Font-Awesome, jQuery, Bootstrap
         --->
         <!--Bootstrap-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         
         <!--Font-Awesome-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
@@ -22,35 +20,38 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
         <!-- Scripts -->
-        <script src="assets/js/app.js"></script>
+        <script src="assets/js/bootstrap.bundle.js"></script>
 
         <!-- Styles -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
         <link href="assets/css/custom.css" rel="stylesheet">
+        
     </head>
     <body>
         <div id="app" class="bg-orange">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-md navbar-dark bg-dark text-white shadow-sm">
                 <div class="container-fluid pt-2">
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        Business
+                    <a class="navbar-brand ml-5 px-2" href="{{ url('/') }}">
+                        <h4><i class="fa fa-lg fa-times"></i><span class="text-red">-TREME</span></h4>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav mr-auto">
+                        <ul class="navbar-nav mx-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Gallery</a>
+                                <a class="nav-link" href="#">Gaelic Football</a>
                             </li>
-                        </ul>
-            
-                        <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ml-auto">
-                            <!-- Authentication Links -->
                             <li class="nav-item">
-                                <a class="nav-link" href="#">#</a>
+                                <a class="nav-link" href="#">Basketball</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">E-Sports</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Volleyball</a>
                             </li>
                         </ul>
                     </div>
@@ -65,18 +66,70 @@
 
                     <div class="col-md-8 main-content bg-white">
                         <div class="card p-2">
-                            <div class="card-body">
+                            <div class="card-body text-center">
                                 <p>
-                                    <h3>About Us</h3>
+                                    <h2 class="text-capitalize">Welcome to X<span class="text-red">-treme <i class="fas fa-check-double"></i></span><br><h5 class="text-capitalize">your one stop shop for all your sport needs.</h5></h2>
                                 </p>
+                                <hr class="w-50 mx-auto">
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum maxime facere eum in alias explicabo unde recusandae praesentium? Placeat eveniet ad exercitationem dolorum esse amet tenetur officiis non! Dicta, atque?
+                                    <h3 class="text-capitalize">What are you looking for?</h3>
+                                    <hr>
+                                    <div class="row text-center">
+                                        <div class="col-lg-4 col-12">
+                                            <img src="https://images.unsplash.com/photo-1486286701208-1d58e9338013?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                                            class="img-fluid" height="50%" style="
+                                            border-radius: 25%;
+                                            object-fit: cover;
+                                            width:20em;
+                                            height:20em;
+                                            ">
+                                            <br>
+                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@baraida">Peter Glaser</a></span>
+                                            <p>Gaelic Football</p>
+                                        </div>
+                                        <div class="col-lg-4 col-12">
+                                            <img src="https://images.unsplash.com/photo-1486286701208-1d58e9338013?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                                            class="img-fluid" height="50%" style="
+                                            border-radius: 25%;
+                                            object-fit: cover;
+                                            width:20em;
+                                            height:20em;
+                                            ">
+                                            <br>
+                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@baraida">Peter Glaser</a></span>
+                                            <p>Gaelic Football</p>
+                                        </div>
+                                        <div class="col-lg-4 col-12">
+                                            <img src="https://images.unsplash.com/photo-1486286701208-1d58e9338013?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                                            class="img-fluid" height="50%" style="
+                                            border-radius: 25%;
+                                            object-fit: cover;
+                                            width:20em;
+                                            height:20em;
+                                            ">
+                                            <br>
+                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@baraida">Peter Glaser</a></span>
+                                            <p>Gaelic Football</p>
+                                        </div>
+                                        <div class="col-lg-4 col-12">
+                                            <img src="https://images.unsplash.com/photo-1486286701208-1d58e9338013?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                                            class="img-fluid" height="50%" style="
+                                            border-radius: 25%;
+                                            object-fit: cover;
+                                            width:20em;
+                                            height:20em;
+                                            ">
+                                            <br>
+                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@baraida">Peter Glaser</a></span>
+                                            <p>Gaelic Football</p>
+                                        </div>
+                                    </div>
                                 </p>
                             </div>
                         </div>
 
-                        <div class="footer text-center">
-                            Business &copy; 2021
+                        <div class="footer text-center my-3">
+                            X-treme &copy; 2021
                             <span id="clock" class="mx-1">
                                 <i class="far fa-clock"></i>
                             </span>

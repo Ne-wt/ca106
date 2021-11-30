@@ -6,8 +6,8 @@
     --white: #DEDEDE;
     --red: #F72424;
     --blue: #2FCDFF;
-    --dark: #2B2634;
-    --orange: #FF8420;
+    --dark: #252425;
+    --orange: #747474;
 
     scroll-behavior: smooth;
 }
@@ -59,4 +59,14 @@ main > .row {
 
 .bg-dark {
     background-color: var(--dark);
+}
+
+.nav-item {
+    color: var(--red) !important;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.text-red {
+    color: var(--red);
 }
