@@ -20,19 +20,19 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
         <!-- Scripts -->
-        <script src="assets/js/bootstrap.bundle.js"></script>
+        <script src="/assets/js/bootstrap.bundle.js"></script>
 
         <!-- Styles -->
-        <link href="assets/css/bootstrap.css" rel="stylesheet">
-        <link href="assets/css/custom.css" rel="stylesheet">
-        
+        <link href="/assets/css/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/index.css" rel="stylesheet">
+
     </head>
     <body>
         <div id="app" class="bg-orange">
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-md navbar-dark bg-dark text-white shadow-sm">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark text-white shadow-sm">
                 <div class="container-fluid pt-2">
-                    <a class="navbar-brand ml-5 px-2" href="{{ url('/') }}">
+                    <a class="navbar-brand ml-5 px-2" href="/index.html">
                         <h4><i class="fa fa-lg fa-times"></i><span class="text-red">-TREME</span></h4>
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,16 +42,16 @@
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Gaelic Football</a>
+                                <a class="nav-link" href="/gaelicfootball">Gaelic Football</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Basketball</a>
+                                <a class="nav-link" href="/volleyball">Volleyball</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">E-Sports</a>
+                                <a class="nav-link" href="/basketball">Basketball</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Volleyball</a>
+                                <a class="nav-link" href="/esports">E-Sports</a>
                             </li>
                         </ul>
                     </div>
@@ -73,55 +73,70 @@
                                 <hr class="w-50 mx-auto">
                                 <p>
                                     <h3 class="text-capitalize">What are you looking for?</h3>
+                                    <br>
+                                    <p class="text-red">Click on an image!</p>
                                     <hr>
                                     <div class="row text-center">
-                                        <div class="col-lg-4 col-12">
-                                            <img src="https://images.unsplash.com/photo-1486286701208-1d58e9338013?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                                        <div class="col-lg-4 col-12 page-hover">
+                                            <a href="gaelic-football">
+                                            <img src="/assets/images/gaelicfootball.jpg" 
+                                            alt="Gaelic Football"
                                             class="img-fluid" height="50%" style="
                                             border-radius: 25%;
                                             object-fit: cover;
                                             width:20em;
                                             height:20em;
                                             ">
+                                            </a>
                                             <br>
                                             <span class="text-muted">Photo by <a href="https://unsplash.com/@baraida">Peter Glaser</a></span>
                                             <p>Gaelic Football</p>
                                         </div>
-                                        <div class="col-lg-4 col-12">
-                                            <img src="https://images.unsplash.com/photo-1486286701208-1d58e9338013?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                                        <div class="col-lg-4 col-12 page-hover">
+                                        <a href="volleyball">
+                                            <img src="/assets/images/volleyball.jpg" 
+                                            alt="Volleyball"
                                             class="img-fluid" height="50%" style="
                                             border-radius: 25%;
                                             object-fit: cover;
                                             width:20em;
                                             height:20em;
                                             ">
+                                        </a>
+                                        
                                             <br>
-                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@baraida">Peter Glaser</a></span>
-                                            <p>Gaelic Football</p>
+                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@labelleboheme82">Courtney Schroedel</a></span>
+                                            <p>Volleyball</p>
                                         </div>
-                                        <div class="col-lg-4 col-12">
-                                            <img src="https://images.unsplash.com/photo-1486286701208-1d58e9338013?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                                        <div class="col-lg-4 col-12 page-hover">
+                                            <a href="esports">
+                                            <img src="/assets/images/esports.jpg"
+                                            alt="E-Sports"
                                             class="img-fluid" height="50%" style="
                                             border-radius: 25%;
                                             object-fit: cover;
                                             width:20em;
                                             height:20em;
                                             ">
+                                            </a>
                                             <br>
-                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@baraida">Peter Glaser</a></span>
-                                            <p>Gaelic Football</p>
+                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@isword">Muhannad Ajjan</a></span>
+                                            <p>E-Sports</p>
                                         </div>
-                                        <div class="col-lg-4 col-12">
-                                            <img src="https://images.unsplash.com/photo-1486286701208-1d58e9338013?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                                        <div class="col-lg-4 col-12 page-hover">
+                                            <a href="/basketball">
+                                            <img src="/assets/images/basketball.jpg" 
+                                            alt="Basketball"
                                             class="img-fluid" height="50%" style="
                                             border-radius: 25%;
                                             object-fit: cover;
                                             width:20em;
                                             height:20em;
                                             ">
+                                            </a>
                                             <br>
-                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@baraida">Peter Glaser</a></span>
-                                            <p>Gaelic Football</p>
+                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@sb_design">Stephen Baker</a></span>
+                                            <p>Basketball</p>
                                         </div>
                                     </div>
                                 </p>
@@ -129,7 +144,7 @@
                         </div>
 
                         <div class="footer text-center my-3">
-                            X-treme &copy; 2021
+                            X<span class="text-red">-treme</span> &copy; 2021
                             <span id="clock" class="mx-1">
                                 <i class="far fa-clock"></i>
                             </span>
