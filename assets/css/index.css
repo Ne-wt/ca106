@@ -4,15 +4,16 @@
 
 :root {
     --white: #DEDEDE;
-    --red: #F72424;
-    --blue: #2FCDFF;
-    --dark: #2B2634;
-    --orange: #FF8420;
+    --highlight: #F72424;
+    --accent: #16afdd;
+    --dark: #252425;
+    --background: #747474;
 
     scroll-behavior: smooth;
 }
 
 body {
+    padding-top: 5vh;
     font-family: 'Roboto Mono', monospace;
     margin: 0; /* gets rid of ugly break lines down the sides of the page */
     width: 100%;
@@ -35,6 +36,15 @@ main > .row {
     flex-grow: 1;
 }
 
+a {
+    color: var(--highlight);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
 .main-content {
     padding-top: 1em;
     box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.1);
@@ -50,7 +60,7 @@ main > .row {
 *********************************************/
 
 .bg-orange {
-    background-color: var(--orange);
+    background-color: var(--background);
 }
 
 .bg-white {
@@ -59,4 +69,31 @@ main > .row {
 
 .bg-dark {
     background-color: var(--dark);
+}
+
+.nav-item {
+    color: var(--highlight) !important;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.text-red {
+    color: var(--highlight);
+}
+
+.page-hover {
+    padding: 1em;
+}
+.page-hover:hover {
+    background-color: #ddd;    
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff !important
+}
+
+.active {
+    margin: 0;
+    border-radius: 1em;
+    background-color: var(--accent);
 }
