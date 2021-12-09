@@ -17,3 +17,14 @@
     background-repeat: repeat-x;
     background-size: 10vw;
 }
+
+.btn-primary {
+    background-color: var(--highlight);
+    border-color: var(--highlight);
+}
+
+.about {
+    background-color: #25242511;
+    border-color: var(--highlight);
+    border-width: .25em;
+}

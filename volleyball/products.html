@@ -43,16 +43,16 @@
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mx-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="gaelicfootball">Gaelic Football</a>
+                                <a class="nav-link" href="/gaelicfootball">Gaelic Football</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="volleyball">Volleyball</a>
+                                <a class="nav-link" href="/volleyball">Volleyball</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="basketball">Basketball</a>
+                                <a class="nav-link" href="/basketball">Basketball</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="esports">E-Sports</a>
+                                <a class="nav-link" href="/esports">E-Sports</a>
                             </li>
                         </ul>
                     </div>
@@ -78,17 +78,16 @@
                                     <div class="container px-3 my-5 text-center col-12">
                                         <div class="justify-content-center ">
                                             <div class="form-group mr-3 mb-3 justify-content-center">
-                                                <input class="form-control mb-2" placeholder="Search" name="name" type="text">
-                                                <input class="btn btn-warning col search-button" type="submit" value="Search">
+                                                <input class="form-control mb-2" placeholder="Search" name="name" type="text" id="search">
                                             </div>
                                     
                                         </div>
                                     </div>
 
-                                    <div class="container">
+                                    <div class="container" id="products">
                                         <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="card col-12">
+                                            <div class="col-md-4 product">
+                                                <div class="card col-12 h-100">
                                                     <div class="card-body">
                                                         <h4 class="card-title">
                                                             <i class="fas fa-dumbbell"></i>
@@ -98,6 +97,7 @@
                                                         <p class="card-text text-center">
                                                             <h5>No team should be without a dumbbell. Keep your serves strong and your throws light.</h5>
                                                             <img src="/assets/images/volleyball/dumbbell.jpg" alt="dumbbell" class="img-fluid">
+                                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@delaneyvan">Delaney Van</a></span>
                                                             <hr class="w-50 mx-auto">
                                                             <p>
                                                                 Starting at €50.99
@@ -107,7 +107,29 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col-md-4 product">
+                                                <div class="card col-12 h-100">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title">
+                                                            <i class="fas fa-volleyball-ball"></i>
+                                                            <span class="text-red">-</span>
+                                                            <span class="text-capitalize">Volleyball Ball</span>
+                                                        </h4>
+                                                        <p class="card-text text-center">
+                                                            <h5>You can't play without a ball, but why play without the best of the best?</h5>
+                                                            <img src="/assets/images/volleyball/volleyball.jpg" alt="dumbbell" class="img-fluid">
+                                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@vorosbenisop">Benjamin Voros</a></span>
+                                                            <hr class="w-50 mx-auto">
+                                                            <p>
+                                                                Starting at €15.99
+                                                                <div class="btn btn-primary">Buy Now</div>
+                                                            </p>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+
 
                                     </div>
                                 </p>
@@ -133,6 +155,28 @@
         <script>
             // scripts
             $(document).ready(function() {
+
+                // #search on change
+                $('#search').on('keyup', function() {
+                    let name = $(this).val().toUpperCase();
+
+                    // get all elements with class product
+                    let products = $('.product');
+
+                    // hide any products without name
+                    products.each(function() {
+                        // get all text in the product
+                        let text = $(this).text().toUpperCase();
+                        // check if text contains name
+                        if(!text.includes(name)) {
+                            // if not, hide the product
+                            $(this).fadeOut();
+                        } else {
+                            // if yes, show the product
+                            $(this).fadeIn();
+                        }
+                    });
+                });
 
 
                 // CLOCK
