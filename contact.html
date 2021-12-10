@@ -74,112 +74,37 @@
                         <div class="card p-2">
                             <div class="card-body text-center">
                                 <p>
-                                    <h2 class="text-capitalize">Welcome to X<span class="text-red">-treme <i class="fas fa-check-double"></i></span><br><h5 class="text-capitalize">your one stop shop for all your sport needs.</h5></h2>
+                                    <h2 class="text-capitalize">Thanks for using X<span class="text-red">-treme <i class="fas fa-check-double"></i>!</span>
                                 </p>
                                 <hr class="w-50 mx-auto">
                                 <p>
-                                    <h3 class="text-capitalize">What are you looking for?</h3>
+                                    <h5 class="text-capitalize">Need to talk to our team? Please fill out the form below!</h5>
                                     <br>
-                                    <p class="text-red">Click on an image!</p>
-                                    <hr>
-                                    <div class="row text-center">
-                                        <div class="col-lg-4 col-12 page-hover">
-                                            <a href="/gaelic-football">
-                                            <img src="/assets/images/gaelicfootball.jpg" 
-                                            alt="Gaelic Football"
-                                            class="img-fluid" height="50%" style="
-                                            border-radius: 25%;
-                                            object-fit: cover;
-                                            width:20em;
-                                            height:20em;
-                                            ">
-                                            </a>
-                                            <br>
-                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@baraida">Peter Glaser</a></span>
-                                            <p>Gaelic Football</p>
-                                        </div>
-                                        <div class="col-lg-4 col-12 page-hover">
-                                        <a href="/volleyball">
-                                            <img src="/assets/images/volleyball.jpg" 
-                                            alt="Volleyball"
-                                            class="img-fluid" height="50%" style="
-                                            border-radius: 25%;
-                                            object-fit: cover;
-                                            width:20em;
-                                            height:20em;
-                                            ">
-                                        </a>
-                                        
-                                            <br>
-                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@labelleboheme82">Courtney Schroedel</a></span>
-                                            <p>Volleyball</p>
-                                        </div>
-                                        <div class="col-lg-4 col-12 page-hover">
-                                            <a href="/esports">
-                                            <img src="/assets/images/esports.jpg"
-                                            alt="E-Sports"
-                                            class="img-fluid" height="50%" style="
-                                            border-radius: 25%;
-                                            object-fit: cover;
-                                            width:20em;
-                                            height:20em;
-                                            ">
-                                            </a>
-                                            <br>
-                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@isword">Muhannad Ajjan</a></span>
-                                            <p>E-Sports</p>
-                                        </div>
-                                        <div class="col-lg-4 col-12 page-hover">
-                                            <a href="/basketball">
-                                            <img src="/assets/images/basketball.jpg" 
-                                            alt="Basketball"
-                                            class="img-fluid" height="50%" style="
-                                            border-radius: 25%;
-                                            object-fit: cover;
-                                            width:20em;
-                                            height:20em;
-                                            ">
-                                            </a>
-                                            <br>
-                                            <span class="text-muted">Photo by <a href="https://unsplash.com/@sb_design">Stephen Baker</a></span>
-                                            <p>Basketball</p>    
-                                        </div>
-                                        <div class="col-lg-4 col-12 page-hover">
-                                            <a href="/soccer">
-                                                <img src="/assets/images/soccer.jpg" 
-                                                alt="Soccer"
-                                                class="img-fluid" height="50%" style="
-                                                border-radius: 25%;
-                                                object-fit: cover;
-                                                width:20em;
-                                                height:20em;
-                                                ">
-                                            </a>
-                                            <br>
-                                            <span class="text-muted">Photo by <a href="https://www.pexels.com/@rethaferguson">Retha Ferguson</a></span>
-                                            <p>Soccer</p>
-                                        </div>
-                                        <div class="col-lg-4 col-12 page-hover">
-                                            <a href="/tennis">
-                                                <img src="/assets/images/tennis/tennis.jpg" 
-                                                alt="Soccer"
-                                                class="img-fluid" height="50%" style="
-                                                border-radius: 25%;
-                                                object-fit: cover;
-                                                width:20em;
-                                                height:20em;
-                                                ">
-                                            </a>
-                                            <br>
-                                            <span class="text-muted">Photo by <a href="https://www.pexels.com/@rethaferguson">Retha Ferguson</a></span>
-                                            <p>Tennis</p>
-                                        </div>
+                                    
+                                    <div id="contact">
+                                        <input type="text" class="form-control" placeholder="Name">
+                                        <br>
+                                        <input type="text" class="form-control" placeholder="Email">
+                                        <br>
+                                        <input type="text" class="form-control" placeholder="Subject">
+                                        <br>
+                                        <textarea class="form-control" placeholder="Message" rows="5" cols="33"></textarea>
+                                        <br>
+                                        <button class="btn btn-primary" id="send">Send</button>
                                     </div>
+                                    <div id="thanks" class="hide">
+                                        <h2 class="text-center">Thank you for your message!</h2>
+                                        <p class="text-center">We will get back to you as soon as possible!</p>
+                                        <br>
+                                        <button class="btn btn-primary" id="another">Send Another?</button>
+                                    </div>
+                                    
                                 </p>
                             </div>
                         </div>
 
                         <div class="footer text-center my-3">
+                    <a href="/contact.html"><div class="btn btn-primary mb-2"><h5>Contact Us!</h5></div></a><br>
                             X<span class="text-red">-treme</span> &copy; 2021
                             <span id="clock" class="mx-1">
                                 <i class="far fa-clock"></i>
@@ -199,6 +124,15 @@
             // scripts
             $(document).ready(function() {
 
+                $('#send').click(function() {
+                    $('#contact').fadeOut();
+                    $('#thanks').fadeIn();
+                });
+
+                $('#another').click(function() {
+                    $('#thanks').fadeOut();
+                    $('#contact').fadeIn();
+                });
 
                 // CLOCK
                 function time() {
