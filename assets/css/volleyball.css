@@ -25,6 +25,15 @@
 
 .about {
     background-color: #25242511;
-    border-color: var(--highlight);
-    border-width: .25em;
+    border-color: #ff9100;
+    border-style: dashed;
+    border-width: .15em;
+}
+
+input {
+    background-color: #ff330034 !important;
+}
+
+input:focus {
+    background-color: #f7242444 !important;
 }
