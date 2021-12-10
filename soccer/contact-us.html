@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <!--
+            Font-Awesome, jQuery, Bootstrap
+        --->
+        <!--Bootstrap-->
+        
+        <!--Font-Awesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+        <!--JQuery-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <!-- Scripts -->
+        <script src="js/bootstrap.bundle.js"></script>
+
+        <!-- Styles -->
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/index.css" rel="stylesheet"/>
+
+    </head>
+    <body>
+        <div id="app" class="bg-orange">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark text-white shadow-sm">
+                <div class="container-fluid pt-2">
+                    <a class="navbar-brand ml-5 px-2" href="/index.html">
+                        <h4><i class="fa fa-lg fa-times"></i><span class="text-red">-TREME</span></h4>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="gaelicfootball">Gaelic Football</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="volleyball/">Volleyball</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="basketball">Basketball</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="esports">E-Sports</a>
+                            </li>
+							<li class="nav-item">
+                                <a class="nav-link" href="soccer">Soccer</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="container-fluid">
+                <div class="row col-md-12">
+                    <div class="col-md-2">
+
+                    </div>
+
+                    <div class="col-md-8 main-content bg-white">
+                        <div class="card p-2">
+                            <div class="card-body text-center">
+                                <p>
+                                    <h2 class="text-capitalize">Contact Us</i></span><br><h5>If you're yearning to find some soccer equipment look no further!</h5></h2>
+                                </p>
+                                <hr class="w-50 mx-auto">
+								 Form</h1>
+<form class="cf">
+  <div class="half left cf">
+    <input type="text" id="input-name" placeholder="Name">
+    <input type="email" id="input-email" placeholder="Email address">
+    <input type="text" id="input-subject" placeholder="Subject">
+  </div>
+  <div class="half right cf">
+    <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+  </div>  
+  <input type="submit" value="Submit" id="input-submit">
+</form>
+                            </div>
+                        </div>
+
+                        <div class="footer text-center my-3">
+                            X<span class="text-red">-treme</span> &copy; 2021
+                            <span id="clock" class="mx-1">
+                                <i class="far fa-clock"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        
+        <script>
+            // scripts
+            $(document).ready(function() {
+
+
+                // CLOCK
+                function time() {
+                setInterval(function() { 
+                    var date = new Date();
+                    var time = new Date(date.getTime());
+                    var cycle = time.getUTCHours() >= 12 ? ' PM' : ' AM';
+                    var display = time.getUTCHours() + ":" +  ('0' + time.getUTCMinutes()).substr(-2) + ":" +  ('0' + time.getUTCSeconds()).substr(-2) + " " + cycle;
+                    $("#clock").html('<i class="far fa-clock"></i> ' + display);
+                }, 1000)}
+
+                setInterval(time(), 1000);
+
+                $('#button').click(function(){
+                    $('#button').text('clicked');
+                });
+            });
+        </script>
+    </body>
+</html>
