@@ -96,6 +96,7 @@ a:hover {
     margin: 0;
     border-radius: 1em;
     background-color: var(--accent);
+    padding-left: .25em;
 }
 
 .hide {
