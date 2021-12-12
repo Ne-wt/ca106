@@ -77,7 +77,7 @@
                                             <li class="mb-2"><a href="../volleyball"><i class="fas fa-lg fa-volleyball-ball"></i> Volleyball Home</a></li>
                                             <li class="mb-2"><a href="../volleyball/about.html"><i class="fas fa-lg fa-question"></i> About Volleyball</a></li>                                            <li class="mb-2 active-sidebar"><a href="../volleyball/products.html"><i class="fas fa-lg fa-dollar-sign"></i> Products</a></li>
                                             <li class="mb-2"><a href="../volleyball/media.html"><i class="fas fa-lg fa-camera"></i> Volleyball Media</a></li>
-                                            <li class="mb-2"><a href="../volleyball/players.html"><i class="fas fa-lg fa-user"></i> Volleyball Players</a></li>
+                                            <li class="mb-2"><a href="../volleyball/differences.html"><i class="fas fa-lg fa-user"></i> Volleyball Differences</a></li>
                                         </ul>
                                     </p>
                                 </div>
@@ -128,7 +128,7 @@
                                                             <hr class="w-50 mx-auto">
                                                             <p>
                                                                 Starting at €50.99
-                                                                <div class="btn btn-primary buy">Buy Now</div>
+                                                                <div class="btn btn-primary buy" data-toggle="tooltip" title="Added to cart!">Buy Now</div>
                                                             </p>
                                                         </p>
                                                     </div>
@@ -149,7 +149,7 @@
                                                             <hr class="w-50 mx-auto">
                                                             <p>
                                                                 Starting at €15.99
-                                                                <div class="btn btn-primary buy">Buy Now</div>
+                                                                <div class="btn btn-primary buy" data-toggle="tooltip" title="Added to cart!">Buy Now</div>
                                                             </p>
                                                         </p>
                                                     </div>
@@ -170,7 +170,7 @@
                                                             <hr class="w-50 mx-auto">
                                                             <p>
                                                                 Starting at €30.99
-                                                                <div class="btn btn-primary buy">Buy Now</div>
+                                                                <div class="btn btn-primary buy" data-toggle="tooltip" title="Added to cart!">Buy Now</div>
                                                             </p>
                                                         </p>
                                                     </div>
@@ -191,7 +191,7 @@
                                                             <hr class="w-50 mx-auto">
                                                             <p>
                                                                 Starting at €12.99
-                                                                <div class="btn btn-primary browse">Browse</div>
+                                                                <div class="btn btn-warning browse">Browse</div>
                                                             </p>
                                                         </p>
                                                     </div>
@@ -212,7 +212,7 @@
                                                             <hr class="w-50 mx-auto">
                                                             <p>
                                                                 Starting at €19.99
-                                                                <div class="btn btn-primary buy">Buy Now</div>
+                                                                <div class="btn btn-primary buy" data-toggle="tooltip" title="Added to cart!">Buy Now</div>
                                                             </p>
                                                         </p>
                                                     </div>
@@ -233,7 +233,7 @@
                                                             <hr class="w-50 mx-auto">
                                                             <p>
                                                                 Starting at €5.99
-                                                                <div class="btn btn-primary buy">Buy Now</div>
+                                                                <div class="btn btn-primary buy" data-toggle="tooltip" title="Added to cart!">Buy Now</div>
                                                             </p>
                                                         </p>
                                                     </div>
@@ -282,9 +282,19 @@
             // scripts
             $(document).ready(function() {
 
+                // bootstrap tooltip toggle
+                $(function () {
+                    $('[data-toggle="tooltip"]').tooltip()
+                });
+                
                 let amount = 0;
                 let total = 0;
                 let contents = [];
+
+                $('.buy').tooltip({
+                    trigger: 'manual',
+                    placement: 'top'
+                });
 
                 $('.buy').click(function() {
                     let price = $(this).parent().text().split('€')[1];
@@ -308,7 +318,12 @@
                         contents[title] += 1;
                     }
 
-                    loadModal('Added to cart!', 'Successfully added ' + title + 'to cart!');
+
+                    let btn = $(this)
+                    btn.tooltip('show');
+                    setTimeout(function() {
+                        btn.tooltip('hide');
+                    }, 1000);
                 });
 
                 $('.contents').click(function() {
