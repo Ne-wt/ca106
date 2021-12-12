@@ -68,7 +68,26 @@
             <main class="container-fluid">
                 <div class="row col-md-12">
                     <div class="col-md-2">
-
+                        <div class="sidebar">
+                            <div class="card main-content bg-dark h-30">
+                                <div class="card-body text-center">
+                                    <p class="card-text">
+                                        <a href="/volleyball/index.html" class="text-white">
+                                            <ul class="no-style-list">
+                                                <li class="mb-2"><a href="/"><i class="fas fa-lg fa-home"></i> Home</a></li>
+                                                <li class="mb-2"><a href="/volleyball"><i class="fas fa-lg fa-volleyball-ball"></i> Volleyball Home</a></li>
+                                                <li class="mb-2 active-sidebar"><a href="/volleyball/products.html"><i class="fas fa-lg fa-dollar-sign"></i> Products</a></li>
+                                                <li class="mb-2"><a href="/volleyball/media.html"><i class="fas fa-lg fa-camera"></i> Volleyball Media</a></li>
+                                                <li class="mb-2"><a href="/volleyball/players.html"><i class="fas fa-lg fa-user"></i> Volleyball Players</a></li>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card bg-dark p-2 mt-2">
+                            </div>
+                            <div class="card bg-dark p-2 mt-2 w-50 mx-auto">
+                            </div>
+                        </div>
                     </div>
 
                     <div class="col-md-8 main-content bg-white">
@@ -82,6 +101,8 @@
                                 <hr class="w-50 mx-auto">
                                 <p>
                                     <div class="container px-3 my-4 text-center col-12">
+                                        <p><span class="amount">0</span> in cart <i class="fas fa-shopping-cart"></i> - <b>Total price: <span class="total">€0</span></b></i></p>
+                                        <p><div class="btn btn-primary contents hide">Show Contents</div></p>
                                         <p>Try me, I work!<p>
                                         <div class="justify-content-center ">
                                             <div class="form-group mr-3 mb-3 justify-content-center">
@@ -108,7 +129,7 @@
                                                             <hr class="w-50 mx-auto">
                                                             <p>
                                                                 Starting at €50.99
-                                                                <div class="btn btn-primary">Buy Now</div>
+                                                                <div class="btn btn-primary buy">Buy Now</div>
                                                             </p>
                                                         </p>
                                                     </div>
@@ -129,7 +150,7 @@
                                                             <hr class="w-50 mx-auto">
                                                             <p>
                                                                 Starting at €15.99
-                                                                <div class="btn btn-primary">Buy Now</div>
+                                                                <div class="btn btn-primary buy">Buy Now</div>
                                                             </p>
                                                         </p>
                                                     </div>
@@ -150,7 +171,7 @@
                                                             <hr class="w-50 mx-auto">
                                                             <p>
                                                                 Starting at €30.99
-                                                                <div class="btn btn-primary">Buy Now</div>
+                                                                <div class="btn btn-primary buy">Buy Now</div>
                                                             </p>
                                                         </p>
                                                     </div>
@@ -171,7 +192,7 @@
                                                             <hr class="w-50 mx-auto">
                                                             <p>
                                                                 Starting at €12.99
-                                                                <div class="btn btn-primary">Browse</div>
+                                                                <div class="btn btn-primary browse">Browse</div>
                                                             </p>
                                                         </p>
                                                     </div>
@@ -192,7 +213,7 @@
                                                             <hr class="w-50 mx-auto">
                                                             <p>
                                                                 Starting at €19.99
-                                                                <div class="btn btn-primary">Buy Now</div>
+                                                                <div class="btn btn-primary buy">Buy Now</div>
                                                             </p>
                                                         </p>
                                                     </div>
@@ -207,13 +228,13 @@
                                                             <span class="text-capitalize">Sport Tape</span>
                                                         </h4>
                                                         <p class="card-text text-center">
-                                                            <p>Never risk sore palms ever again. Play with confidence.</p>
+                                                            <p>Never risk sore palms again. Play with confidence.</p>
                                                             <img src="/assets/images/volleyball/tape.jpg" alt="Sport tape on hands" class="img-fluid">
                                                             <span class="text-muted">Photo by <a href="https://unsplash.com/@lgnwvr">Logan Weaver</a></span>
                                                             <hr class="w-50 mx-auto">
                                                             <p>
                                                                 Starting at €5.99
-                                                                <div class="btn btn-primary">Buy Now</div>
+                                                                <div class="btn btn-primary buy">Buy Now</div>
                                                             </p>
                                                         </p>
                                                     </div>
@@ -242,12 +263,69 @@
                     </div>
                 </div>
             </main>
+            <div class="modal fade" id="modalContent" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title"></h5>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <p>Click anywhere to close</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
         </div>
-
         
         <script>
             // scripts
             $(document).ready(function() {
+
+                let amount = 0;
+                let total = 0;
+                let contents = [];
+
+                $('.buy').click(function() {
+                    let price = $(this).parent().text().split('€')[1];
+                    total += parseFloat(price);
+                    $('.total').text('€' + total.toFixed(2));
+
+                    amount++;
+                    $('.amount').text(amount);
+                    if(amount > 0) {
+                        $('.contents').removeClass('hide')
+                    } 
+                    // find card title 
+                    let title = $(this).parent().parent().parent().find('.card-title').text();
+                    // remove any non alhpabetical characters
+                    title = title.replace(/[^a-zA-Z ]/g, "");
+
+                    if(!contents[title]) {
+                        contents[title] = 1;
+                    }
+                    else {
+                        contents[title] += 1;
+                    }
+
+                    loadModal('Added to cart!', 'Successfully added ' + title + 'to cart!');
+                });
+
+                $('.contents').click(function() {
+                    html = '';
+                    for(var key in contents) {
+                        html += key + ' x ' + contents[key] + '<br>';
+                    }
+                    loadModal('Current Cart', html);
+                });
+
+                function loadModal(title, message) {
+                    $('#modalContent').find('.modal-body').html('');
+                    $('#modalContent').find('.modal-title').html(title);
+                    $('#modalContent').find('.modal-body').html(message)
+                    $('#modalContent').modal('show');
+                }
 
                 // #search on change
                 $('#search').on('keyup', function() {

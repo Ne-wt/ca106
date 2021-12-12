@@ -110,7 +110,7 @@
                                     <div class="card p-3">
                                         <h4>Who Did What?</h4>
                                         <p>ComSci Group K</p>
-                                        <a href="https://github.com/Ne-wt/ca106"><div class="btn btn-dark">View our Github!</div></a>
+                                        <a href="https://github.com/Ne-wt/ca106" target="_blank"><div class="btn btn-dark">View our Github!</div></a>
                                         <div class="container">
                                             <hr class="w-50 mx-auto">
                                             <h5>Tara Greenwood</h5>
@@ -148,13 +148,14 @@
                                                 <ul>
                                                     <li>Gaelic Football Pages</li>
                                                 </ul>
+                                        </div>
                                     </div>
                                 </p>
                             </div>
                         </div>
 
                         <div class="footer text-center my-3">
-                    <a href="/contact.html"><div class="btn btn-primary mb-2"><h5>Contact Us!</h5></div></a><br>
+                            <a href="/contact.html"><div class="btn btn-primary mb-2"><h5>Contact Us!</h5></div></a><br>
                             X<span class="text-red">-treme</span> &copy; 2021
                             <span id="clock" class="mx-1">
                                 <i class="far fa-clock"></i>
@@ -175,8 +176,16 @@
             $(document).ready(function() {
 
                 $('#send').click(function() {
-                    $('#contact').fadeOut();
-                    $('#thanks').fadeIn();
+
+                    // if name and message are filled out
+                    if($('#contact input[type="text"]').val() && $('#contact textarea').val()) {
+                        $('#contact').fadeOut();
+                        $('#thanks').fadeIn();
+                    }
+                    else {
+                        alert('Please fill out the form!');
+                    }
+
                 });
 
                 $('#another').click(function() {

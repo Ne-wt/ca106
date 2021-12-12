@@ -18,6 +18,18 @@
     background-size: 10vw;
 }
 
+input {
+    background-color: #ffe6d0 !important;
+}
+
+input:focus {
+    background-color: #ffffff !important;
+}
+
+/*************************
+* Stylisation & Colour
+*************************/
+
 .btn-primary {
     background-color: var(--highlight);
     border-color: var(--highlight);
@@ -30,10 +42,24 @@
     border-width: .15em;
 }
 
-input {
-    background-color: #ff330034 !important;
+.zoom {
+    transition: transform .5s;
 }
 
-input:focus {
-    background-color: #f7242444 !important;
+.zoom:hover {
+    transform: scale(1.25);
+    transition: transform .5s;
+}
+
+.active-sidebar {
+    margin: 0;
+    padding: .25em;
+    border-radius: 1em;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+@media(max-width: 1024px) {
+    .sidebar {
+        display: none;
+    }
 }
