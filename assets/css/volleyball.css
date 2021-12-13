@@ -10,7 +10,7 @@
 
 #app {
     /* downloaded from here https://www.143vinyl.com/files/downloads/free_downloads/sports/Volleyball.svg */
-    background-image: url("/assets/images/volleyball/volleyball_bg.svg");
+    background-image: url("../assets/images/volleyball/volleyball_bg.svg");
     background-blend-mode: multiply;
     background-position: bottom;
     background-attachment: fixed;
