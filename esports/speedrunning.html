@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Speedrunning</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <!--
+            Font-Awesome, jQuery, Bootstrap
+        --->
+        <!--Bootstrap-->
+        
+        <!--Font-Awesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+        <!--JQuery-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <!-- Scripts -->
+        <script src="/assets/js/bootstrap.bundle.js"></script>
+
+        <!-- Styles -->
+        <link href="/assets/css/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/index.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="app" class="bg-orange">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark text-white shadow-sm">
+                <div class="container-fluid pt-2">
+                    <a class="navbar-brand ml-5 px-2" href="/index.html">
+                        <h4><i class="fa fa-lg fa-times"></i><span class="text-red">-TREME</span></h4>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/gaelicfootball">Gaelic Football</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/volleyball">Volleyball</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/basketball">Basketball</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/esports">E-Sports</a>
+                            </li>
+							<li class="nav-item">
+                                <a class="nav-link" href="/soccer/index.html">Soccer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/tennis">Tennis</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="container-fluid">
+                <div class="row col-md-12">
+                    <div class="col-md-2">
+
+                    </div>
+
+                    <div class="col-md-8 main-content bg-white">
+                        <div class="row text-center">
+                            <p>
+                                <h2 class="text-capitalize">Speedrunning X<span class="text-red">-treme <i class="fas fa-check-double"></i></span><br>
+                            </p>
+                            <hr>
+                            <h2>What is speedrunning?</h2>
+                            <p>
+                                Speedrunning is the act of completing a game as fast as is possible. There are many different categories of speedruns. 
+                                Each game's speedrunning community will choose one of these categories as the main category, but runners are free to run which ever they want.
+                                The categories are:
+                                <ul>
+                                    <li>With Gliches: Use every glich that makes the run faster.</li>
+                                    <li>No Major Gliches: Some gliches are not allowed, as decided by the community.</li>
+                                    <li>Glichless: No gliches allowed.</li>
+                                    <li>Any%: Only goal is to get to the end creddits.</li>
+                                    <li>100%: Must complete all of the game in order to be in this category.</li>
+                                    <li>Low%: Complete as little of the game as is possible.</li>
+                                </ul>
+                            </p>
+                            <h2>Why is Speedrunning Fun?</h2>
+                            <p>
+                                Speedrunning is a way for people to keep being challenged by their favourite games even after they have beaten them dozens of times. 
+                                For many speedrunning is a challenge of their dexterity, patience, and wits, as they race their own best time, or even the world record. 
+                                For others, speedrunning is about breaking apart a game, seeing what makes it tick. These people will use tools such as frame inputs to find gliches or exploits. These people are called TASers (Tool Assisted Speedrunners)
+                            </p>
+                            <h2>Videos</h2>
+                            <p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/R_wscUcbynk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/I5auJOBC828" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </p>
+                            <hr>
+                        </div>
+                        <div class="footer text-center my-3">
+                            <a href="/contact.html"><div class="btn btn-primary mb-2"><h5>Contact Us!</h5></div></a>
+                            <br>
+                            X<span class="text-red">-treme</span> &copy; 2021
+                            <span id="clock" class="mx-1">
+                                <i class="far fa-clock"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+
+                    </div>
+                </div>
+            </main>
+        </div>
+
+
+        <script>
+            // scripts
+            $(document).ready(function() {
+
+
+                // CLOCK
+                function time() {
+                setInterval(function() { 
+                    var date = new Date();
+                    var time = new Date(date.getTime());
+                    var cycle = time.getUTCHours() >= 12 ? ' PM' : ' AM';
+                    var display = time.getUTCHours() + ":" +  ('0' + time.getUTCMinutes()).substr(-2) + ":" +  ('0' + time.getUTCSeconds()).substr(-2) + " " + cycle;
+                    $("#clock").html('<i class="far fa-clock"></i> ' + display);
+                }, 1000)}
+
+                setInterval(time(), 1000);
+
+                $('#button').click(function(){
+                    $('#button').text('clicked');
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Street Fighter</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <!--
+            Font-Awesome, jQuery, Bootstrap
+        --->
+        <!--Bootstrap-->
+        
+        <!--Font-Awesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+        <!--JQuery-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <!-- Scripts -->
+        <script src="/assets/js/bootstrap.bundle.js"></script>
+
+        <!-- Styles -->
+        <link href="/assets/css/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/index.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div id="app" class="bg-orange">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark text-white shadow-sm">
+                <div class="container-fluid pt-2">
+                    <a class="navbar-brand ml-5 px-2" href="/index.html">
+                        <h4><i class="fa fa-lg fa-times"></i><span class="text-red">-TREME</span></h4>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/gaelicfootball">Gaelic Football</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/volleyball">Volleyball</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/basketball">Basketball</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/esports">E-Sports</a>
+                            </li>
+							<li class="nav-item">
+                                <a class="nav-link" href="/soccer/index.html">Soccer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/tennis">Tennis</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="container-fluid">
+                <div class="row col-md-12">
+                    <div class="col-md-2">
+
+                    </div>
+
+                    <div class="col-md-8 main-content bg-white">
+                        <div class="row text-center">
+                            <p>
+                                <h2 class="text-capitalize">Super Smash Brothers X<span class="text-red">-treme <i class="fas fa-check-double"></i></span><br>
+                            </p>
+                            <hr>
+
+
+                            <h2>What is Street Fighter?</h2>
+                            <p>
+                                Street Fighter is one of the oldest fighting games in existance. The first game released in 1987 and it is still being played competitively to this day. 
+                                It is published by Capcom. The aim of the game is to reduce the opponent's hit points to 0. 
+                                Street Fighter has been one of both the most popular and most influential fighting games.
+                            </p>
+                            <h2>How to Play</h2>
+                            <p>
+                                There are 5 types of atacks: light, medium, heavy, grabs, and specials. Light attacks are useful for when you're very close to your opponent and you need a quick attack.
+                                Medium attacks are useful for when you want to start a combo. Heavy attacks are most useful for punishing your opponent when they miss an attack.
+                                Grabs are useful to attack a blocking opponent. Specials are useful to attack from far away.
+                                You can also block and parry to avoid damage. A parry is harder to execute, but has better results.
+                            </p>
+                            <h2>Hype - Diago's Gambit</h2>
+                            <p>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/JzS96auqau0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </p>
+                        </div>
+                        <hr>
+                        
+                        <div class="footer text-center my-3">
+                            <a href="/contact.html"><div class="btn btn-primary mb-2"><h5>Contact Us!</h5></div></a>
+                            <br>
+                            X<span class="text-red">-treme</span> &copy; 2021
+                            <span id="clock" class="mx-1">
+                                <i class="far fa-clock"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+
+                    </div>
+                </div>
+            </main>
+        </div>
+
+
+        <script>
+            // scripts
+            $(document).ready(function() {
+
+
+                // CLOCK
+                function time() {
+                setInterval(function() { 
+                    var date = new Date();
+                    var time = new Date(date.getTime());
+                    var cycle = time.getUTCHours() >= 12 ? ' PM' : ' AM';
+                    var display = time.getUTCHours() + ":" +  ('0' + time.getUTCMinutes()).substr(-2) + ":" +  ('0' + time.getUTCSeconds()).substr(-2) + " " + cycle;
+                    $("#clock").html('<i class="far fa-clock"></i> ' + display);
+                }, 1000)}
+
+                setInterval(time(), 1000);
+
+                $('#button').click(function(){
+                    $('#button').text('clicked');
+                });
+            });
+        </script>
+    </body>
+</html>
