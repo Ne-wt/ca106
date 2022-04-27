@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CA106 Portfolio Assignment - Tara Greenwood" />
+    <!-- meta tag below is used for Internet Explorer and mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--This means that the browser will (probably) render the width of the page at the width of its own screen. //-->
+    <title>Tara Greenwood's Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <!-- add your stylesheet and any other styling code, e.g. google fonts  a good link is https://fonts.google.com/-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/layout.css" /> 
+    <!--Fontawesome link-->
+    <script src="https://kit.fontawesome.com/89d3cac0f1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+	    <header class="page-header">  <!-- contains the background colour for top of the website -->
+            <div class="header-content">  <!-- Holds the centered website title and subtitle.-->
+                <h1>My Portfolio</h1>
+                <hr>
+                <p>A small sample of works. <i class="fas fa-leaf"></i></p>
+            </div>
+        </header>
+	    <!-- You could style Main here if you wish-->
+        <nav class="page-nav"> <!-- the navigation part of the page.  Note links just jump to different parts of the page.-->
+            <ul>
+                <li class="nav-item"><a href="#about">About Me</a></li>
+                <li class="nav-item"><a href="#work">Work Experience</a></li>
+                <li class="nav-item"><a href="#images">Image Gallery</a></li>
+                <li class="nav-item"><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+       
+    <!--Note here the use of an ID.  the link above actually links to this.  It's a good example of where an ID can be used.  Note also that the section has a class attribute.  use this for styling. -->
+        <section id="about" class="container">  <!-- Holds the about me info & skills column -->
+            <div class="container-content">
+                <h2><i class="fas fa-user-edit"></i> About Me</h2>
+                <div class="content">
+                    <p>Hi! My name is Tara Greenwood. I'm a first year Computer Science student in Dublin City University.<br>This site is for my CA106 assignment :D</p>
+                    <p>I'm 17 and love digital art as well as programming. I love PHP, despite its flaws, though specifically the PHP framework <a href="https://laravel.com/" target="_blank">Laravel</a>.</p>
+                    <p>I do web development part time. I'm self taught, beginning to seriously engage in the world of programming in Spring 2020.
+                        <br><a href="https://github.com/Ne-wt">Here is my GitHub!</a>
+                    </p>
+                    <p class="important"><b>This website is mobile friendly!</b></p>
+                    <hr />
+                    <div class="content-center">
+                        <h3><i class="fas fa-list"></i> My Skills</h3>
+                        <ul>
+                            <li>
+                                <p><i class="fab fa-html5"></i> HTML5</p>
+                            </li>
+                            <li>
+                                <p><i class="fab fa-css3-alt"></i> CSS3</p>
+                            </li>
+                            <li>
+                                <p><i class="fab fa-js-square"></i> JavaScript | JQuery | AJAX</p>
+                            </li>
+                            <li>
+                                <p><i class="fab fa-php"></i> PHP</p>
+                            </li>
+                            <li>
+                                <p><i class="fab fa-laravel"></i> Laravel</p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-database"></i> MySQL</p>
+                            </li>
+                            <li>
+                                <p><i class="fab fa-git-alt"></i> Git</p>
+                            </li>
+                            <li>
+                                <p><i class="fab fa-github"></i> GitHub</p>
+                            </li>
+                            <li>
+                                <p><i class="fab fa-bootstrap"></i> Bootstrap</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="container">
+            <div class="container-content">
+                <h2><i class="fas fa-file"></i> Work Experience</h2>
+                <div class="content">
+                    <!-- add your 200 word maximum work experience content here.  You can use lists of things as well as paragraphs.  Show off the HTML you know.  marks for the HTML, and how well you use it. marks deducted for poor grammar or spelling errors-->
+                    <div class="row">
+                        <div class="img-container">
+                            <img src="images/celestial-seas.png" title="Celestial-Seas Logo" alt="Celestial-Seas logo" class="img-fluid logo">
+                        </div>
+                        <div class="p-container">
+                            <h4>Celestial-Seas - Web Master <small>- Part time</small></h4>
+                            <small>Jan 2020 - Present</small>
+                            <p>I am currently working as a Web Master at <a href="https://celestial-seas.com/" target="_blank">Celestial-Seas</a>. 
+                                I am responsible for maintaining the website and its content.
+                                I am also responsible for the website's design and layout, bug fixes, new features etc.</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <!---->
+                    <div class="row">
+                        <div class="img-container">
+                            <img src="images/pacapillars.png" title="Pacapillars Logo" alt="Pacapillars logo" class="img-fluid logo">
+                        </div>
+                        <div class="p-container">
+                            <h4>Pacapillars - Game Developer <small>- Freelance</small></h4>
+                            <small>Aug 2020 - Present</small>
+                            <p>I work on a need-based freelance agreement with <a href="https://play.pacapillars.com/" target="_blank">Pacapillars</a>. I usually work on JavaScript / AJAX based minigames.</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <!---->
+                    <div class="row">
+                        <div class="img-container">
+                            <img src="images/spirits.png" title="Sprite Festival Logo" alt="Sprite Festival logo" style="border-radius: 50%;" class="img-fluid logo">
+                        </div>
+                        <div class="p-container">
+                            <h4>Sprite Festival - Web Developer | Game Developer <small>- Freelance</small></h4>
+                            <small>Aug 2021 - Present</small>
+                            <p>I work on a need-based freelance agreement with <a href="https://sylphlings.com/" target="_blank">Sprite Festival</a>. I usually work on Laravel based websites with special consideration for Unity endpoints.</p>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <b>Game Demo Video</b>
+                        <br>
+                        <video class="video-center" controls autoplay muted>
+                            <source src="images/game.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="images" class="image-gallery container">
+            <div class="container-content">
+                <h2><i class="fas fa-images"></i> Image Gallery</h2>
+                <div class="content">
+                    <div class="row">
+                        <div class="gallery-container">
+                        <figure>
+                            <img src="images/newt-logo-colour.png" title="My Logo" alt="My Logo" class="img-fluid">
+                            <figcaption> My logo, made by <a href="https://www.deviantart.com/whitefoxdesigns" target="_blank">WhiteFoxDesigns</a> </figcaption>
+                        </figure>  
+                        </div>                 
+                        <div class="gallery-container">
+                        <figure>
+                        <!-- add image one here with 150 word maximum caption.  You may remove the caption if you wish.  Don't forget to use alt tags. -->
+                            <img src="images/github-avatar.png" title="My GitHub Avatar" alt="My GitHub Avatar" class="img-fluid">
+                            <figcaption> My GitHub avatar. It's an opossum!</figcaption>
+                        </figure> 
+                        </div>
+                        <div class="gallery-container">
+                        <figure>
+                            <!-- add image one here with 150 word maximum caption.  You may remove the caption if you wish.  Don't forget to use alt tags. -->
+                            <img src="images/fish.png" title="My Pet Fish" alt="My Pet Fish" class="img-fluid">
+                            <figcaption> A photo of my pet betta fish named Morwine!</figcaption>
+                        </figure> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-me container">
+            <div class="container-content">
+                <h2><i class="fas fa-mail-bulk"></i> Contact Me</h2>
+                <div class="content">
+                    <form action="https://formspree.io/tara.greenwood2@mail.dcu.ie" method="post">
+	                    <!-- Style this nicely.  Don't worry if the form doesn't work, marks here for how well you style it. -->
+                        <p>
+                            <label for="contact-name">Your Name</label>
+                            <input id="contact-name" required type="text" name="contact-name" />
+                        </p>
+                        <p>
+                            <label for="contact-email">Your Email Address</label>
+                            <input id="contact-email" required type="email" name="contact-email" /> 
+                        </p>
+                        <p>
+                            <label for="contact-phone">Your Phone Number (Optional)</label>
+                            <input id="contact-phone" type="tel" name="contact-phone" /> 
+                        </p>
+                        <p>
+                            <label for="contact-message">Your Message</label>
+                            <br>
+                            <textarea id="contact-message" name="contact-message" cols="45" rows="8"></textarea>
+                        </p>
+                        <p>
+                            <input type="submit" value="Send My Message" /> 
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer id="footer-layout" class="footer">
+              <p> &copy; <a href="dcu.ie/">DCU 2020-2021</a>
+				<span>&middot;</span>
+				<span>Tara Greenwood</span> 
+				<span>&middot;</span> 
+				<span>This is student coursework</span> 
+				<span>&middot;</span>
+				<span>Lecturer: <a href="http://www.computing.dcu.ie/~jkernan">Jane Kernan</a></span> 
+				<span>&middot;</span> 
+				<span><a href="http://validator.w3.org/check?uri=https://student.computing.dcu.ie/~greenwt2/portfolio/" title="W3C HTML Validation Service" >Valid HTML</a><br/></span> 
+			</p>
+        <!-- Note that the link to the validator above will only produce results when your page is uploaded to the server, and you click on the link from the browser.-->
+        </footer>
+    </main>
+</body>
+
+</html>
